@@ -5,34 +5,15 @@ $screen-xl-min: 1200px;
 
 // HALLOWEEN
 #pumpkin {
-  display: block;
-  position: absolute;
-  z-index: 2000;
-  #ball {
-    position: relative;
-  }
-}
-@media (max-width: $screen-md-max) {
-  #pumpkin {
-    img {
-      height: 80px;
-      margin: -10px 0 0 8.5rem;
-    }
-  }
-}
-@media only screen and (min-width: $screen-lg-min) {
-  #pumpkin {
-    img {
-      height: 80px;
-      margin: -10px 0 0 18px;
-    }
-  }
-}
-@media only screen and (min-width: $screen-xl-min) {
-  #pumpkin {
-    img {
-      margin: -16px 0 0 70px;
-    }
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin-left: 40px;
+  #scarry {
+    position: absolute;
+    height: 80px;
+    width: 80px;
+    background: url("img/halloween_pumpkin.svg") no-repeat;
   }
 }
 #bats {
@@ -63,7 +44,6 @@ $screen-xl-min: 1200px;
   top: -50%;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
-  -m-transform: rotate(-45deg);
   transform: rotate(-45deg);
   z-index: 1;
   opacity: 0.5;

@@ -12,7 +12,7 @@ $( document ).ready(function() {
                 innerHeight = $body.innerHeight(),
                 counter,
                 defaults = {
-                    image: 'img/bats.png', // Path to the image.
+                    image: 'img/bats.svg', // Path to the image.
                     zIndex: 10000, // The z-index you need.
                     amount: 10, // Bat amount.
                     width: 35, // Image width.
@@ -125,6 +125,7 @@ $( document ).ready(function() {
         };
     }(jQuery));
     $.fn.halloweenBats({});
+
     var pumY = 0;
     var pumYdir = 10;
     window.setInterval(
@@ -134,7 +135,7 @@ $( document ).ready(function() {
         } else {
             pumY--;
         }
-        ball.style.top = pumY + 'px';
+        scarry.style.top = pumY + 'px';
         if (pumY > 10) {
             pumYdir = 0;
         }
@@ -144,7 +145,7 @@ $( document ).ready(function() {
     }, 200);
     window.setInterval(
         function drawPum(timePassed) {
-            ball.style.left = Math.random() * (-1) + 2 + 'px';
+            scarry.style.left = Math.random() * (-1) + 2 + 'px';
         }, 1000);
 
 
