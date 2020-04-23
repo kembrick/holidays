@@ -148,7 +148,6 @@ $( document ).ready(function() {
         }, 1000);
 
 
-    /* Новогодний снежок */
     /**
      * jquery.snow - jQuery Snow Effect Plugin
      * @params flakeChar - the HTML char to animate
