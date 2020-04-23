@@ -1,6 +1,5 @@
 $( document ).ready(function() {
 
-    // https://codepen.io/jezemery/pen/EVywVJ
     // HALLOWEEN
     (function ($) {
         "use strict";
@@ -159,33 +158,30 @@ $( document ).ready(function() {
      * @params durationMillis - stop effect after duration
      * @example $.fn.snow({ maxSize: 200, newOn: 1000 });
      */
-    (function($){
+    (function($) {
 
-        $.fn.snow = function(options){
-
-            var $flake 			= $('<div class="flake" />').css({'position': 'absolute', 'top': '-50px'}),
+        $.fn.snow = function(options) {
+            var $flake          = $('<div class="flake" />').css({'position': 'absolute', 'top': '-50px'}),
                 snowContainer   = $("#snow"),
                 documentHeight 	= snowContainer.height() + 20,
-                documentWidth	= snowContainer.width(),
-                defaults		= {
-                    flakeChar	: "&#10052;",
-                    minSize		: 10,
-                    maxSize		: 20,
-                    newOn		: 500,
-                    flakeColor	: ["#ffffff"],
+                documentWidth   = snowContainer.width(),
+                defaults        = {
+                    flakeChar   : "&#10052;",
+                    minSize     : 10,
+                    maxSize     : 20,
+                    newOn       : 500,
+                    flakeColor  : ["#ffffff"],
                     durationMillis: null
                 },
-                options			= $.extend({}, defaults, options);
-
+                options         = $.extend({}, defaults, options);
             $flake.html(options.flakeChar);
-
-            var interval		= setInterval( function(){
-                var startPositionLeft 	= Math.random() * documentWidth + snowContainer.position().left + defaults.maxSize,
-                    startOpacity		= 0.5 + Math.random(),
-                    sizeFlake			= options.minSize + Math.random() * options.maxSize,
-                    endPositionTop		= documentHeight - defaults.maxSize - 40,
-                    endPositionLeft		= startPositionLeft - 100 + Math.random() * 200,
-                    durationFall		= documentHeight * 10 + Math.random() * 5000;
+            var interval                = setInterval( function() {
+                var startPositionLeft   = Math.random() * documentWidth + snowContainer.position().left + defaults.maxSize,
+                    startOpacity        = 0.5 + Math.random(),
+                    sizeFlake           = options.minSize + Math.random() * options.maxSize,
+                    endPositionTop      = documentHeight - defaults.maxSize - 40,
+                    endPositionLeft     = startPositionLeft - 100 + Math.random() * 200,
+                    durationFall        = documentHeight * 10 + Math.random() * 5000;
                 $flake
                     .clone()
                     .appendTo('#snow')
@@ -218,7 +214,6 @@ $( document ).ready(function() {
                 }, options.durationMillis);
             }
         };
-
     })(jQuery);
     $.fn.snow({ minSize: 10, maxSize: 40, newOn: 400 });
 
@@ -231,7 +226,7 @@ $( document ).ready(function() {
         var r_bg = Math.floor(Math.random() * 25) + 100;
         var r_time = Math.floor(Math.random() * 5) + 10;
 
-        $('.bg_heart').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
+        $('#hearts').append("<div class='heart' style='width:" + r_size + "px;height:" + r_size + "px;left:" + r_left + "%;background:rgba(255," + (r_bg - 25) + "," + r_bg + ",1);-webkit-animation:love " + r_time + "s ease;-moz-animation:love " + r_time + "s ease;-ms-animation:love " + r_time + "s ease;animation:love " + r_time + "s ease'></div>");
 
         $('.heart').each(function() {
             var top = $(this).css("top").replace(/[^-\d\.]/g, '');
